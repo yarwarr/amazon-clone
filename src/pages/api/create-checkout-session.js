@@ -25,7 +25,7 @@ export default async (req, res) => {
     line_items: transformedItems,
     mode: "payment",
     success_url: `${process.env.HOST}/success`,
-    
+
     cancel_url: `${process.env.HOST}/checkout`,
     metadata: {
       email,
@@ -35,5 +35,4 @@ export default async (req, res) => {
 
   res.status(200).json({ id: session.id });
   console.log("here");
-  f;
 };
